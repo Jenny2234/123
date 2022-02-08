@@ -46,7 +46,8 @@
                 再輸入一次<input type="password"class="password" placeholder="請輸入一致密碼"><br>
                 <p></p>
                 <div style="text-align:center;">
-                    <button type="button" class="btn btn-warning con"> <a href="page1.html">返回</a></button>
+                    <a href="page1.html">返回</a>
+                    <!-- <button type="button" class="btn btn-warning con"> <a href="page1.html">返回</a></button> -->
                     <button type="button" class="btn btn-warning con"> <a href="page3.html">下一頁</a></button>
                     <!-- <button onclick="return submit1(this)"><a href="page3.html">繼續</a> </button>    -->
 
@@ -103,6 +104,11 @@
             else{
             $("p").text("")
             }
+            $.post("https://www.townway.com.tw/auth",{
+                name: document.getElementsByClassName("name").value,
+                password: document.getElementsByClassName("pass").value,
+                Email: document.getElementsByClassName("mail").value
+            });
         });
     </script>
   </body>
